@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>課題画像閲覧サイト</title>
+  <meta name="description" content="課題3・summer-vacationの課題画像一覧です。">
+  <meta name="viewport" content="width=device-width>
+
+  <!--=============Google Font ===============-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!--機能編 6-1-4 動きを組み合わせて全画面で見せる-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+<link rel="stylesheet" type="text/css" href="css/8-11.css">
+<!--機能編 6-2-2 カテゴリ別に画像を並び替える-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<!--自作のCSS-->
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/parts.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+
+
+
+</head>
+
+<body>
+    
+<header class="header-title"">
+
+       <div class="main-title">
+        <h1 class="boxed"><span>課題画像閲覧サイト</span></h1>
+       </div>
+
+
+
+      <div class="page-title">
+        <h1 class="eachTextAnime">summer-vacation課題画像一覧</h1>
+      </div>
+      <div class="box3">
+        <p>このページでは課題3/summer-vacationの課題画像を閲覧・検索することが出来ます。<br>画像の下に書いてある数字は画像番号、<br>『da』は文化情報学科。『db』はメディア情報学科です。<br>◎ソートボタンでは、クリックをすることで学科別に画像を切り替えて表示することが出来ます。<br>初期の設定は『全て』になっています。<br>画像をクリックすることで拡大することが出来ます。</p>
+      </div>
+
+
+<!--/slider--></header>
+
+<div class="openbtn"><span></span><span></span><span></span></div>
+<nav id="g-nav">
+<div id="g-nav-list">
+           <ul>
+             <li class="blurTrigger blur"><a href="./TOP.html">TOP</a></li>
+             <li class="blurTrigger blur"><a href="./search.html">SEARCH</a></li>
+             <li class="blurTrigger blur"><a href="./TOPIC1.html">TOPIC1</a></li>
+             <li class="blurTrigger blur"><a href="./TOPIC2.html">TOPIC2</a></li>
+             <li class="blurTrigger blur"><a href="./TOPIC3.html">TOPIC3</a></li>
+             <li class="blurTrigger blur"><a href="./TOPIC4.html">TOPIC4</a></li>
+             <li class="blurTrigger blur"><a href="./TOPIC5.html">TOPIC5</a></li>
+           </ul>
+</div>
+</nav>
+
+
+
+
+
+
+    
+<div class="wrapper">
+
+
+  <div class="tt">
+   <h2>ソートボタン</h2>
+  </div>
+
+
+      <ul id="sort" class="sort-btn">
+      <li class="sort00 active">全て</li>
+      <li class="da">文化情報学科</li>
+      <li class="db">メディア情報学科</li>
+     </ul>
+	
+	<ul id="gallery" class="grid delayScroll">
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/001-青山ひびき-a22db002.jpg" data-fancybox="group1" data-caption="001・db/青山ひびき">
+               <img src="./images/画像編集技法2023/課題3/001-青山ひびき-a22db002.jpg" alt="青山ひびき">
+                <dl>
+                 <dt>001・db/青山ひびき</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/002-秋田陽菜乃-a22db003.jpg" data-fancybox="group1" data-caption="002・db/秋田陽菜乃">
+               <img src="./images/画像編集技法2023/課題3/002-秋田陽菜乃-a22db003.jpg" alt="秋田陽菜乃">
+                <dl>
+                 <dt>002・db/秋田陽菜乃</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/003-安藤こずえ-a22db005.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/003-安藤こずえ-a22db005.jpg" alt="安藤こずえ">
+                <dl>
+                 <dt>003・db/安藤こずえ</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/004-青木美咲希-a22db001.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/004-青木美咲希-a22db001.jpg" alt="青木美咲希">
+                <dl>
+                 <dt>004・db/青木美咲希</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/005-浅井凜音-a22db004.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/005-浅井凜音-a22db004.jpg" alt="浅井凜音">
+                <dl>
+                 <dt>005・db/浅井凜音</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/006-天野優愛-a22da002.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/006-天野優愛-a22da002.jpg" alt="天野優愛">
+                <dl>
+                 <dt>006・da/天野優愛</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/007-後藤佳奈-a21da043.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/007-後藤佳奈-a21da043.jpg" alt="後藤佳奈">
+                <dl>
+                 <dt>007・da/後藤佳奈</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/008-池田衣里-a22db009.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/008-池田衣里-a22db009.jpg" alt="池田衣里">
+                <dl>
+                 <dt>008・db/池田衣里</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/009-稲吉菜緒-a21db016.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/009-稲吉菜緒-a21db016.jpg" alt="稲吉菜緒">
+                <dl>
+                 <dt>009・db/稲吉菜緒</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/010-喜多清根-a22da031.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/010-喜多清根-a22da031.jpg" alt="喜多清根">
+                <dl>
+                 <dt>010・da/喜多清根</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/011-松原亜実-a22da072.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/011-松原亜実-a22da072.jpg" alt="松原亜実">
+                <dl>
+                 <dt>011・da/松原亜実</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/012-前田晴香-a22da070.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/012-前田晴香-a22da070.jpg" alt="前田晴香">
+                <dl>
+                 <dt>012・da/前田晴香</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/013-森菜々美-a22da077.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/013-森菜々美-a22da077.jpg" alt="森菜々美">
+                <dl>
+                 <dt>013・da/森菜々美</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/014-宮崎友-a22da075.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/014-宮崎友-a22da075.jpg" alt="宮崎友">
+                <dl>
+                 <dt>014・da/宮崎友</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/015-大橋彩花-a22db024.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/015-大橋彩花-a22db024.jpg" alt="大橋彩花">
+                <dl>
+                 <dt>015・db/大橋彩花</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/016-大沼愛菜佳-a22da017.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/016-大沼愛菜佳-a22da017.jpg" alt="大沼愛菜佳">
+                <dl>
+                 <dt>016・da/大沼愛菜佳</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/017-小野美咲-a22db027.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/017-小野美咲-a22db027.jpg" alt="小野美咲">
+                <dl>
+                 <dt>017・db/小野美咲</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/018-尾山怜花-a21da027.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/018-尾山怜花-a21da027.jpg" alt="尾山怜花">
+                <dl>
+                 <dt>018・da/尾山怜花</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/019-鷺山あいか-a22db043.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/019-鷺山あいか-a22db043.jpg" alt="鷺山あいか">
+                <dl>
+                 <dt>019・db/鷺山あいか</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/020-總見榛名-a22db055.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/020-總見榛名-a22db055.jpg" alt="總見榛名">
+                <dl>
+                 <dt>020・db/總見榛名</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/021-佐藤未悠-a22db045.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/021-佐藤未悠-a22db045.jpg" alt="佐藤未悠">
+                <dl>
+                 <dt>021・db/佐藤未悠</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/022-酒井里子-a20da061.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/022-酒井里子-a20da061.jpg" alt="酒井里子">
+                <dl>
+                 <dt>022・da/酒井里子</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/023-鈴木琉杏-a22db052.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/023-鈴木琉杏-a22db052.jpg" alt="鈴木琉杏">
+                <dl>
+                 <dt>023・db/鈴木琉杏</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/024-杉山歌野-a22db050.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/024-杉山歌野-a22db050.jpg" alt="杉山歌野">
+                <dl>
+                 <dt>024・db/杉山歌野</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/025-沢田柚奈-a22db047.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/025-沢田柚奈-a22db047.jpg" alt="沢田柚奈">
+                <dl>
+                 <dt>025・db/沢田柚奈</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/026-内田日菜-a22db021.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/026-内田日菜-a22db021.jpg" alt="内田日菜">
+                <dl>
+                 <dt>026・db/内田日菜</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/027-山田依里奈-a22db093.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/027-山田依里奈-a22db093.jpg" alt="山田依里奈">
+                <dl>
+                 <dt>027・db/山田依里奈</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item da">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/028-山中菜都美-a21da113.jpg" data-fancybox="group2" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/028-山中菜都美-a21da113.jpg" alt="山中菜都美">
+                <dl>
+                 <dt>028・da/山中菜都美</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+           <li class="item db">
+            <div class="item-content">
+             <a href="./images/画像編集技法2023/課題3/029-山﨑颯香-a22db091.jpg" data-fancybox="group1" data-caption="003・db/安藤こずえ">
+               <img src="./images/画像編集技法2023/課題3/029-山﨑颯香-a22db091.jpg" alt="山﨑颯香">
+                <dl>
+                 <dt>029・db/山﨑颯香</dt>
+                </dl>
+             </a>
+            </div>
+           </li>
+	</ul>
+
+<!--/wrapper--></div>
+    
+<footer id="footer"><!--footerの手前で止まるようにする-->
+     <footer class="footer">
+
+    <p id="page-top"><a href="#"><span></span></a></p>
+
+       <nav class="site-menu">
+         <ul>
+           <li><a href="./TOP.html">TOP</a></li>
+           <li><a href="./search.html">SEARCH</a></li>
+           <li><a href="./TOPIC1.html">TOPIC1</a></li>
+           <li><a href="./TOPIC2.html">TOPIC2</a></li>
+           <li><a href="./TOPIC3.html">TOPIC3</a></li>
+           <li><a href="./TOPIC4.html">TOPIC4</a></li>
+           <li><a href="./TOPIC5.html">TOPIC5</a></li>
+         </ul>
+       </nav>
+       <p class="footer-text">A20DA035 河合奈美希</p>
+
+
+<!--=============JS ===============--> 
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--機能編 4-1-1数字カウントアップ-->
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<!--IE11用　不必要なら削除-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+<!--機能編 6-1-4 動きを組み合わせて全画面で見せる-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>  
+<!--機能編 6-2-2 カテゴリ別に画像を並び替える-->
+<!--Muuri-->
+<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+<!--fancybox-->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!--自作のJS-->    
+<script src="js/script2.js"></script>
+</body>
+</html>
