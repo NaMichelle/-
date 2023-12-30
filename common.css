@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+
+*,
+::before,
+::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol{
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.header-title h1{
+  font-family: 'Kiwi Maru', serif;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 10px;
+  color: #331100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mainblur{
+	filter: blur(8px);
+}
+
+
+
+#g-nav{
+  position:fixed;
+  z-index: -1;
+  opacity: 0;
+  top:0;
+  width:100%;
+  height: 100vh;
+  background: rgba(148,255,155,0.92);
+  transition: all 0.3s;
+}
+
+#g-nav.panelactive{
+  opacity: 1;
+  z-index:999;
+}
+
+#g-nav.panelactive #g-nav-list{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+#g-nav.panelactive ul {
+  display: block;
+}
+
+#g-nav li{
+  list-style: none;
+  text-align: center;
+  font-family: 'Kiwi Maru', serif;
+}
+
+#g-nav li a{
+  color:  #ffffff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*背景の設定*/
+
+#g-nav li a{
+    /*背景色の基点とするためrelativeを指定*/
+	position: relative;
+}
+
+#g-nav li a::after {
+	content: '';
+    /*絶対配置で線の位置を決める*/
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+    /*背景の形状*/
+	width: 0;
+	height:100%;
+	background: #00947a;
+    /*アニメーションの指定*/
+	transition: all .5s;
+	opacity: 0;/*はじめは透過0*/
+}
+
+/*現在地とhoverの設定*/
+#g-nav li.current a::after,
+#g-nav li a:hover::after {
+    /*背景の形状*/
+	width: 100%;/*横幅を伸ばす*/
+	opacity: 1;/*不透明に*/
+}
+
+#g-nav li.current a,
+#g-nav li a:hover{
+  	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.openbtn{
+  position:fixed;
+  z-index: 9999;
+  top:10px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+	
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+  width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+  top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  color: #ffffff;
+  background-color: #028760;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-menu ul{
+  display: flex;
+}
+
+.site-menu li{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.site-menu ul li a{
+  font-size: 23px;
+  font-family: 'Kiwi Maru', serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.site-menu ul li a:hover{
+  color: #e95464;
+}
+
+
+.footer-text{
+  font-family: 'Kiwi Maru', serif;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+
+
+
+
+
+.site-menu li{
+    /*線の基点とするためrelativeを指定*/
+  position: relative;
+    margin: 0 10px;
+}
+
+/*線の基点位置*/
+.site-menu li::before,
+.site-menu li::after{
+  content:"";
+    /*絶対配置で線の位置を決める*/
+  position: absolute;
+    /*線の形状*/
+  width: 0;
+  height: 2px;
+  background: #e95464;
+/*アニメーションの指定*/
+  transition: all 0.2s linear;
+  transition-delay: 0.2s;
+}
+
+.site-menu li::before{
+  right: 0;
+  top: 0;
+}
+.site-menu li::after{
+  left: 0;
+  bottom: 0;
+}
+
+/*線の基点位置2 spanタグ*/
+
+.site-menu li span{
+  display: block;
+}
+
+.site-menu li span::before,
+.site-menu li span::after{
+  content:"";
+    /*絶対配置で線の位置を決める*/
+  position: absolute;
+    /*線の形状*/
+  width: 2px;
+  height: 0;
+  background: #e95464;
+/*アニメーションの指定*/
+  transition: all 0.2s linear;
+}
+
+.site-menu li span::before{
+  left: 0;
+  top: 0;
+}
+.site-menu li span::after{
+  right: 0;
+  bottom: 0;
+}
+
+/*現在地とhoverした際の線の変化*/
+
+.site-menu li.current::before,
+.site-menu li.current::after,
+.site-menu li:hover::before,
+.site-menu li:hover::after{
+  width: 100%;/*横幅を100%に*/
+}
+
+.site-menu li.current span::before,
+.site-menu li.current span::after,
+.site-menu li:hover span::before,
+.site-menu li:hover span::after{
+  height: 100%;/*縦幅を100%に*/
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px){
+
+.footer{
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.site-menu ul{
+  display: block;
+  text-align: center;
+}
+
+.site-menu li{
+  margin-top: 10px;
+}
+
+}
