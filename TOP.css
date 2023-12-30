@@ -1,0 +1,794 @@
+@charset "utf-8";
+
+
+body{
+  background: linear-gradient(to right, rgb(204, 255, 190), rgb(250, 255, 203));
+}
+
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+ 
+.blurTrigger {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #fff352,#98d98e,#006e54);;
+	text-align: center;
+	color: #fff;
+}
+
+@media only screen and (max-width: 768px)
+.progressbar-text {
+    font-size: 3rem;
+}
+
+.progressbar-text {
+    font-size: 5rem;
+    font-family: 'Italianno', cursive;
+}
+
+
+
+
+
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクの形状*/
+#page-top a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #69BD83;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+
+#page-top a:hover{
+  background: #006948;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#page-top span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: rotate(45deg);
+  margin: 8px 0 0 0;
+}
+
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+/*検証のためのCSS*/
+
+#footer{
+  background:#333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-title h1{
+  font-family: 'Kiwi Maru', serif;
+  text-align: center;
+  color: #24140e;
+}
+
+
+
+
+
+.boxed{
+  display: flex;
+  justify-content: center;
+  font-size: 38px;
+  font-family: 'Kiwi Maru', serif;
+  padding-top: 100px;
+  color: #000;
+  overflow: hidden;
+  text-align: center;
+  > span{
+    border: 5px solid #00a381;
+    border-radius:30px 30px 30px 30px;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    position: relative;
+  }
+  > span:before,
+  > span:after{
+    border-bottom: 5px solid #00a381;
+    content: '';
+    margin: 0 3px;
+    position: absolute;
+    top: 50%;
+    width: 100%; // Line-length. 100% width is equal to width of boxed-area. 
+  }
+  > span:before{
+    right: 100%;
+  }
+  > span:after{
+    left: 100%;
+  }
+}
+
+.hr2 {
+  border-top: 5px dotted #3eb370; /* 点線 */
+}
+
+
+
+
+
+
+
+
+
+
+.page-title h1{
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 50px;
+  text-align:center;
+  color: #331100;
+  padding-top: 30px;
+}
+
+
+
+
+.eachTextAnime span{opacity: 0;}
+
+.eachTextAnime.appeartext span{
+  animation: text_anime_on 8s ease-out forwards;
+
+}
+@keyframes text_anime_on {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+
+
+.sab-main{
+  margin-top: 100px;
+}
+
+.slide-description{
+  font-family: 'Kiwi Maru', serif;
+  font-size: 25px;
+  text-align: center;
+  color: #331100;
+
+}
+
+.slide-container {
+    width: 100%;
+    margin: 35px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.sab-main p{
+transition: 0.2s; /* 0.3秒で拡大までの時間 */
+}
+.sab-main p:hover{
+transform: scale(0.93); /* 1.1倍に拡大 */
+}
+
+
+
+
+
+.slide-container img{
+  border-top-left-radius: 10px; /*左上*/
+  border-top-right-radius: 10px; /*右上*/
+  border-bottom-right-radius: 10px; /*右下*/
+  border-bottom-left-radius: 10px; /*左下*/
+}
+.slide-wrapper {
+  display: flex;
+  animation: slide-flow 80s infinite linear 1s both;
+}
+.slide{
+  width: 350px;
+  object-fit:cover;
+  border: 1px solid #ddd;
+  margin: 0 3px;
+}
+@keyframes slide-flow {
+     0% {transform: translateX(0);}
+ 100% {transform: translateX(-100%);}
+}
+
+.slide-paused:hover .slide-wrapper {
+  animation-play-state: paused;
+}
+
+.slide-paused:hover .slide-wrapper img:hover {
+  opacity: .8;
+  cursor: grabbing;
+}
+
+.main-description p{
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  color: #331100;
+}
+
+
+
+
+.TextTyping span {
+  display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+  content: "|";
+  animation: typinganime 0.8s ease infinite;
+}
+
+@keyframes typinganime {
+  from{opacity:0}
+  to{opacity:1}
+}
+
+
+
+
+
+.hr1{
+  position: relative;
+  height: 3px;
+  border-width: 0;
+  background-color: #00bcd4;
+  background-image: -webkit-linear-gradient( 135deg, #fef263 10%, #005c42 100%);
+  background-image: linear-gradient( 135deg, #fef263 10%, #005c42 100%);
+}
+
+
+#page-link li{
+  font-family: 'Kaisei HarunoUmi', serif;  list-style: none;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#page-link li a{
+  text-decoration: none;
+}
+
+
+.btntransform{
+    /*丸の基点とするためrelativeを指定*/
+  position: relative;
+    /*ボタンの形状*/	
+  display: inline-block;
+  padding: 0 0 0 15px;
+  line-height: 50px;
+  color: #333;
+  text-decoration: none;
+  outline: none;
+}
+
+/* 丸が動く */
+.btntransform::before{
+  content: '';
+    /*絶対配置で丸の位置を決める*/
+  position: absolute;
+  left: 0;
+  z-index: -1;
+    /*丸の形状*/
+  width: 50px;
+  height: 50px;
+  background: #69BD83;
+  border-radius: 25px;
+    /*アニメーションの指定*/
+  transition: .3s ease-out;
+}
+
+/*hoverした際の形状*/
+.btntransform:hover::before{
+  width: 310px;
+}
+
+/* 矢印の形状 */
+.btntransform::after{
+  position: absolute;
+  content: '';
+  top: 0.7em;
+  right: -15px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.boxed{
+  display: flex;
+  justify-content: center;
+  font-size: 38px;
+  font-family: 'Kiwi Maru', serif;
+  padding-top: 100px;
+  color: #000;
+  overflow: hidden;
+  text-align: center;
+  > span{
+    border: 5px solid #00a381;
+    border-radius:30px 30px 30px 30px;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    position: relative;
+  }
+  > span:before,
+  > span:after{
+    border-bottom: 5px solid #00a381;
+    content: '';
+    margin: 0 3px;
+    position: absolute;
+    top: 50%;
+    width: 100%; // Line-length. 100% width is equal to width of boxed-area. 
+  }
+  > span:before{
+    right: 100%;
+  }
+  > span:after{
+    left: 100%;
+  }
+}
+
+.hr2 {
+  border-top: 5px dotted #3eb370; /* 点線 */
+}
+
+
+
+
+.text p{
+  text-align: center;
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 20px;
+  padding-top: 35px;
+  line-height: 45px;
+}
+
+
+
+.lead{
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.lead p{
+  line-height: 2;
+  text-align: center;
+  font-family: 'Kiwi Maru', serif;
+  font-size:  30px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+
+
+.lead{
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.lead:before, .lead:after{
+  content: "";
+  flex-grow: 1;
+  height: 3px; /* 線の太さを変えたいときはここを変える */
+  background: #3eb370; /* 線の色を変えたいときはここを変える */
+  margin:0 .4em; /* 文字と線の余白用 なくても良い */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sab-text{
+  text-align: center;
+  font-family: 'Kiwi Maru', serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.item-list{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: scroll;
+}
+
+.item-list li{
+  flex-shrink: 0;
+  width: 260px;
+  margin-left: 35px;
+}
+
+.item-list li:first-child{
+  margin-left: 0;
+}
+
+.item-list img{
+   width: 200px;
+   height: 300px
+}
+
+
+.item-list img{
+  border-top-left-radius: 10px; /*左上*/
+  border-top-right-radius: 10px; /*右上*/
+  border-bottom-right-radius: 10px; /*右下*/
+  border-bottom-left-radius: 10px; /*左下*/
+}
+
+
+
+.item-list dl{
+  margin-top: 20px;
+}
+
+.item-list dt{
+  font-weight: bold;
+  font-family: 'Kiwi Maru', serif;
+}
+
+
+
+
+
+.item-list2{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: scroll;
+}
+
+.item-list2 li{
+  flex-shrink: 0;
+  width: 260px;
+  margin-left: 55px;
+}
+
+.item-list2 li:first-child{
+  margin-left: 0;
+}
+
+.item-list2 img{
+   width: 250px;
+   height: 150px
+}
+
+
+.item-list2 img{
+  border-top-left-radius: 10px; /*左上*/
+  border-top-right-radius: 10px; /*右上*/
+  border-bottom-right-radius: 10px; /*右下*/
+  border-bottom-left-radius: 10px; /*左下*/
+}
+
+
+
+
+.item-list2 dl{
+  margin-top: 20px;
+}
+
+.item-list2 dt{
+  font-weight: bold;
+  font-family: 'Kiwi Maru', serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.item-list3{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: scroll;
+}
+
+.item-list3 li{
+  flex-shrink: 0;
+  width: 260px;
+  margin-left: 55px;
+}
+
+.item-list3 li:first-child{
+  margin-left: 0;
+}
+
+.item-list3 img{
+   width: 150px;
+   height: 150px
+}
+
+
+
+
+
+
+.item-list3 dl{
+  margin-top: 20px;
+}
+
+.item-list3 dt{
+  font-weight: bold;
+  font-family: 'Kiwi Maru', serif;
+}
+
+
+
+
+
+
+
+
+
+
+.link-site-button{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.link-buttom{
+  background-color: #69BD83;;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Kiwi Maru', serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.link-buttom:hover{
+  background-color: #2e8b57;
+}
+
+
+
+
+
+
+
+
+.box2{
+  padding: 0.5em 1em;
+  margin: 2em 9em;
+  border: solid 3px #316745;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
+
+
+
+
+
+
+.detail-text h2{
+  font-family: 'Kaisei HarunoUmi', serif;  list-style: none;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+
+.detail-text p{
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+
+
+@media (max-width: 800px){
+
+.slide{
+  width: 100px;
+  object-fit:cover;
+  border: 1px solid #ddd;
+  margin: 0 3px;
+}
+
+
+.item-list{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.item-list2{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.item-list li{
+  width: 220px;
+  margin-left: 30px;
+}
+
+.item-list2 li{
+  margin-left: 30px;
+}
+
+.box2{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 3px #6091d3;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
+
+
+}
